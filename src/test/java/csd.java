@@ -1,16 +1,21 @@
+package project;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
-import mainjava.App;
+import pkg.app;
+public class apptest {
+@Test
+public void testlogin1()
+{
+app myapp=new app();
+Assert.assertEquals(0, myapp.userLogin("abc", "abc123"));
+}
+@Test
+public void testlogin2()
+{
 
-public class csd {
-	public void test1() {
-		App myapp=new App();
-		Assert.assertEquals(1,myapp.userLogin("Zoro","1piece"));
-		
-	}
-	public void test2() {
-		App myapp2=new App();
-		Assert.assertEquals(1,myapp2.userLogin("Zoro","1piece"));
-		
-	}
+app myapp=new app();
+Assert.assertEquals(1, myapp.userLogin("abc", "abc@123"));
+
+}
 }
